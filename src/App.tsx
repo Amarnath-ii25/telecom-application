@@ -1,26 +1,25 @@
-import React, { useState } from 'react';
-import HomePage from './pages/HomePage';
-import './App.css';
-import { NerdChatWidget } from 'nerdagent-chat-widget-react';
-import { MessageCircle } from 'lucide-react';
+import React, { useState } from "react";
+import HomePage from "./pages/HomePage";
+import "./App.css";
+import { NerdChatWidget } from "nerdagent-chat-widget-react";
+import { MessageCircle } from "lucide-react";
 
 const App: React.FC = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
 
   const config = {
-    apiKey: 'DT_WLT_wwMv4dPJKhZCVabzVB8maWuw8Nz3bFfTse6QViE',
-    agentId: '31',
-    agentName: 'Support Agent',
-    agentRole: 'Customer Support',
-    primaryColor: '#2d3e50',
-    accentColor: '#4e8cff',
-    welcomeMessage: 'Hi! How can I help you today?',
-    placeholderText: 'Type your message...',
-    // 👇 Cast fixes the TypeScript error for WidgetPosition
+    apiKey: "DT_H9WFJOQqccBVn1Pr9cZKHTEVvXge7K8ciSKhZmxxP6g",
+    agentId: "121",
+    agentName: "Support Agent",
+    agentRole: "Customer Support",
+    primaryColor: "#2d3e50",
+    accentColor: "#4e8cff",
+    welcomeMessage: "Hi! How can I help you today?",
+    placeholderText: "Type your message...",
     position:
-      'bottom-right' as unknown as import('nerdagent-chat-widget-react').WidgetPosition,
-    width: '350',
-    height: '500',
+      "bottom-right" as unknown as import("nerdagent-chat-widget-react").WidgetPosition,
+    width: "350",
+    height: "500",
     showMinimizeButton: true,
     showTimestamps: true,
     enableFileUpload: false,
@@ -29,24 +28,22 @@ const App: React.FC = () => {
   };
 
   const handleMessageSent = (event: any) => {
-    console.log('Message sent:', event);
+    console.log("Message sent:", event);
   };
 
   const handleWidgetOpened = () => {
-    console.log('Chat widget opened');
+    console.log("Chat widget opened");
   };
 
   const handleWidgetClosed = () => {
-    console.log('Chat widget closed');
+    console.log("Chat widget closed");
     setIsChatOpen(false);
   };
 
   return (
     <div className="app">
-      {/* Main Page */}
       <HomePage />
 
-      {/* Floating Chat Icon */}
       {!isChatOpen && (
         <button
           className="chat-toggle-btn"
