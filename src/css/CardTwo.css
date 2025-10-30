@@ -1,0 +1,82 @@
+.card-two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, #000000 0%, #1c1c1c 100%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.card-two-image img {
+  max-width: 450px;
+  height: auto;
+  border-radius: 16px;
+}
+
+.card-two-content {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.card-two-category {
+  color: #ffcc00;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.card-two-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.card-two-description {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card-two-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.link {
+  color: #00aaff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-two {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .card-two-content {
+    padding-left: 0;
+  }
+
+  .card-two-image img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}

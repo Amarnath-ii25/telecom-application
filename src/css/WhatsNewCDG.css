@@ -1,0 +1,158 @@
+/* Background Section */
+.whats-new-section {
+  position: relative;
+  background-color: #113a72;
+  color: #ffffff;
+  padding: 100px 60px;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Content Container */
+.whats-new-content {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Header */
+.section-header-news {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.header-decoration-news {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.decoration-line-news {
+  width: 60px;
+  height: 3px;
+  background-color: #00a5e0;
+}
+
+.decoration-dots-news {
+  display: flex;
+  gap: 6px;
+}
+
+.dot-news {
+  width: 10px;
+  height: 10px;
+  background-color: #00a5e0;
+  border-radius: 50%;
+}
+
+.header-text-news {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title-news {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.section-subtitle-news {
+  font-size: 18px;
+  font-weight: 400;
+  color: #c7d5eb;
+  margin-top: 8px;
+}
+
+/* News Items */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.news-item {
+  max-width: 1100px;
+}
+
+.news-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.news-description {
+  font-size: 15px;
+  color: #c8d3e0;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+.news-divider {
+  width: 100%;
+  max-width: 250px;
+  height: 2px;
+  background-color: #00a5e0;
+  margin-top: 10px;
+}
+
+/* Read More */
+.read-more-container {
+  text-align: right;
+}
+
+.read-more-link {
+  color: #5ab6e6;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.read-more-link:hover {
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .whats-new-section {
+    padding: 80px 40px;
+  }
+
+  .section-title-news {
+    font-size: 28px;
+  }
+
+  .section-subtitle-news {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header-news {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .whats-new-section {
+    padding: 60px 24px;
+    border-top-right-radius: 0;
+  }
+
+  .section-title-news {
+    font-size: 24px;
+  }
+
+  .news-title {
+    font-size: 18px;
+  }
+
+  .read-more-container {
+    text-align: center;
+  }
+}

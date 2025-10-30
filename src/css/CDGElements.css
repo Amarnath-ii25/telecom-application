@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.cdg-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 80px;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #fff;
+}
+
+/* Main Section */
+.main-section {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.main-heading {
+  color: #004b8d;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.main-description {
+  color: #004b8d;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* Cards Section */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.card {
+  border: 1.5px solid #00a5e0;
+  border-radius: 12px;
+  padding: 48px 36px;
+  text-align: center;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 360px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 165, 224, 0.1);
+  transform: translateY(-4px);
+}
+
+.card-icon {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  color: #004b8d;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.card-description,
+.card-additional {
+  color: #5a6c7d;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  max-width: 520px;
+}
+
+.card-link {
+  color: #00a5e0;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 12px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.card-link:hover {
+  color: #007ab8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cdg-container {
+    padding: 48px 40px;
+  }
+
+  .main-heading {
+    font-size: 30px;
+  }
+
+  .main-description {
+    font-size: 17px;
+  }
+
+  .cards-container {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .main-heading {
+    font-size: 26px;
+  }
+
+  .main-description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .card {
+    padding: 36px 24px;
+  }
+}

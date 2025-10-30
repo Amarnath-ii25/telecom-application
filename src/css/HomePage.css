@@ -1,0 +1,21 @@
+.homepage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-top: 0; /* ❌ Removed top padding to eliminate unwanted space */
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .homepage {
+    padding-top: 0; /* Keep it zero for mobile too */
+  }
+}
+
+.main-content {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
