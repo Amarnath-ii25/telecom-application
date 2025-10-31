@@ -1,8 +1,5 @@
-// pages/HomePage.tsx
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { CATEGORIES } from '../constants/categories';
 import type { CategoryTile as CategoryTileType } from '../types/agent.types';
@@ -17,15 +14,21 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="home-page">
-      <Header />
       <main className="home-content">
+        {/* Hero Section with Logo and Title */}
         <section className="hero-section">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVPmlzoXKw20K6j8cmukDjRRdeIW63Er8ROg&s"
+            alt="Innovation Incubator"
+            className="hero-logo"
+          />
           <h1 className="hero-title">Agent Management Platform</h1>
           <p className="hero-subtitle">
             Select a category to explore specialized AI agents
           </p>
         </section>
 
+        {/* Categories Section */}
         <section className="categories-section">
           <div className="categories-grid">
             {CATEGORIES.map((category) => (

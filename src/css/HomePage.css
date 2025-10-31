@@ -1,5 +1,3 @@
-/* css/HomePage.css */
-
 .home-page {
   min-height: 100vh;
   display: flex;
@@ -11,26 +9,35 @@
   padding: 2rem;
 }
 
+/* === HERO SECTION === */
 .hero-section {
   text-align: center;
-  padding: 4rem 2rem;
-  margin-bottom: 3rem;
+  padding: 1.5rem 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-logo {
+  width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.75rem auto;
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #666;
-  max-width: 600px;
-  margin: 0 auto;
+  margin: 0;
 }
 
+/* === CATEGORY GRID === */
 .categories-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -44,7 +51,7 @@
 }
 
 .category-tile {
-  background: white;
+  background: #fff;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -60,7 +67,7 @@
 }
 
 .category-tile:focus {
-  outline: 3px solid #4A90E2;
+  outline: 3px solid #4a90e2;
   outline-offset: 2px;
 }
 
@@ -88,7 +95,7 @@
   bottom: 1rem;
   right: 1rem;
   font-size: 1.5rem;
-  color: #4A90E2;
+  color: #4a90e2;
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -98,6 +105,7 @@
   transform: translateX(5px);
 }
 
+/* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2rem;
@@ -110,5 +118,10 @@
   .categories-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .hero-logo {
+    width: 180px;
+    margin-bottom: 0.5rem;
   }
 }
