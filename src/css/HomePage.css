@@ -1,21 +1,114 @@
-.homepage {
+/* css/HomePage.css */
+
+.home-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding-top: 0; /* ❌ Removed top padding to eliminate unwanted space */
-  width: 100%;
+}
+
+.home-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.categories-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.category-tile {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.category-tile:focus {
+  outline: 3px solid #4A90E2;
+  outline-offset: 2px;
+}
+
+.category-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.category-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.category-arrow {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #4A90E2;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.category-tile:hover .category-arrow {
+  opacity: 1;
+  transform: translateX(5px);
 }
 
 @media (max-width: 768px) {
-  .homepage {
-    padding-top: 0; /* Keep it zero for mobile too */
+  .hero-title {
+    font-size: 2rem;
   }
-}
 
-.main-content {
-  flex: 1;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }

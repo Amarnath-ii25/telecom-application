@@ -1,84 +1,48 @@
-import React, { useState } from "react";
-import HomePage from "./pages/HomePage";
-import "./App.css";
-import { NerdChatWidget } from "nerdagent-chat-widget-react";
-import { MessageCircle } from "lucide-react";
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import TelecomPage from './pages/TelecomPage';
+import { agentService } from './services/agent.service';
 
 const App: React.FC = () => {
-  const [isChatOpen, setIsChatOpen] = useState(false);
+  useEffect(() => {
+    const token = import.meta.env.VITE_AGENT_TOKEN;
+    if (token) {
+      agentService.setToken(token);
+    } else {
+      console.warn('No token found in environment variables');
+    }
 
-  const config = {
-    apiKey: "DT_H9WFJOQqccBVn1Pr9cZKHTEVvXge7K8ciSKhZmxxP6g",
-    agentId: "121",
-    agentName: "Support Agent",
-    agentRole: "Customer Support",
-    primaryColor: "#2d3e50",
-    accentColor: "#4e8cff",
-    welcomeMessage: "Hi! How can I help you today?",
-    placeholderText: "Type your message...",
-    position:
-      "bottom-right" as unknown as import("nerdagent-chat-widget-react").WidgetPosition,
-    width: "350",
-    height: "500",
-    showMinimizeButton: true,
-    showTimestamps: true,
-    enableFileUpload: false,
-    enableSpeech: false,
-    showPoweredBy: true,
-  };
+    // Hide or adjust the chat tooltip popup (“Hi, how can I help you?”)
+    const interval = setInterval(() => {
+      const widget = document.querySelector('nerd-chat-widget') as any;
+      if (widget && widget.shadowRoot) {
+        const tooltip = widget.shadowRoot.querySelector('.nerd-chat-widget-tooltip');
+        if (tooltip) {
+          // ❌ Hide completely
+          tooltip.style.display = 'none';
 
-  const handleMessageSent = (event: any) => {
-    console.log("Message sent:", event);
-  };
+          // ✅ Or adjust position instead of hiding (uncomment below lines if you prefer repositioning)
+          // tooltip.style.bottom = '100px';
+          // tooltip.style.right = '50px';
+          // tooltip.style.backgroundColor = '#1a1a1a';
+          // tooltip.style.color = '#fff';
 
-  const handleWidgetOpened = () => {
-    console.log("Chat widget opened");
-  };
+          clearInterval(interval);
+        }
+      }
+    }, 500);
 
-  const handleWidgetClosed = () => {
-    console.log("Chat widget closed");
-    setIsChatOpen(false);
-  };
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="app">
-      <HomePage />
-
-      {!isChatOpen && (
-        <button
-          className="chat-toggle-btn"
-          onClick={() => setIsChatOpen(true)}
-          aria-label="Open Chat"
-        >
-          <MessageCircle size={28} />
-        </button>
-      )}
-
-      {/* Chat Widget (appears when clicked) */}
-      {isChatOpen && (
-        <NerdChatWidget
-          apiKey={config.apiKey}
-          agentId={config.agentId}
-          agentName={config.agentName}
-          agentRole={config.agentRole}
-          primaryColor={config.primaryColor}
-          accentColor={config.accentColor}
-          welcomeMessage={config.welcomeMessage}
-          placeholderText={config.placeholderText}
-          position={config.position}
-          width={config.width}
-          height={config.height}
-          showMinimizeButton={config.showMinimizeButton}
-          showTimestamps={config.showTimestamps}
-          enableFileUpload={config.enableFileUpload}
-          enableSpeech={config.enableSpeech}
-          showPoweredBy={config.showPoweredBy}
-          onMessageSent={handleMessageSent}
-          onWidgetOpened={handleWidgetOpened}
-          onWidgetClosed={handleWidgetClosed}
-        />
-      )}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/telecom" element={<TelecomPage />} />
+      </Routes>
+    </Router>
   );
 };
 

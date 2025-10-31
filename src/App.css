@@ -24,22 +24,3 @@ body {
   width: 100%;
 }
 
-.chat-toggle-btn {
-  position: fixed;
-  bottom: 25px;     /* distance from bottom */
-  right: 25px;      /* distance from right */
-  background-color: #4e8cff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 14px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-  z-index: 9999;    /* ensures it stays above everything else */
-}
-
-.chat-toggle-btn:hover {
-  background-color: #356fd6;
-  transform: scale(1.1);
-}
