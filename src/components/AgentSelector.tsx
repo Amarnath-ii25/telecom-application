@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import type { Agent } from "../types/agent.types";
-import { agentService } from "../services/agent.service";
+import { agentService } from "../services/agentService";
 import "../css/AgentSelector.css";
 import { NerdChatWidget } from "nerdagent-chat-widget-react";
 
@@ -33,8 +33,8 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({
       );
       setAgents(fetchedAgents);
     } catch (err) {
-      setError("Failed to load agents. Please try again.");
       console.error("Error loading agents:", err);
+      setError("Failed to load agents. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -77,7 +77,7 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({
         <div className="agent-selector-header">
           <h2 className="agent-selector-title">{categoryName} Agents</h2>
           <p className="agent-selector-subtitle">
-            Select an agent to view details and interact
+            Select an agent to start interacting
           </p>
         </div>
 
@@ -101,51 +101,15 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({
         </div>
 
         {selectedAgent && (
-          <>
-            {/* <div className="agent-details">
-              <div className="agent-details-header">
-                <h3>{selectedAgent.name}</h3>
-                <span className={`agent-status ${selectedAgent.status}`}>
-                  {selectedAgent.status}
-                </span>
-              </div>
-              <p className="agent-description">{selectedAgent.description}</p>
-              <div className="agent-meta">
-                <div className="meta-item">
-                  <span className="meta-label">Model:</span>
-                  <span className="meta-value">{selectedAgent.model_id}</span>
-                </div>
-                <div className="meta-item">
-                  <span className="meta-label">Orchestration:</span>
-                  <span className="meta-value">
-                    {selectedAgent.agent_orchestration_system}
-                  </span>
-                </div>
-                {selectedAgent.is_super_agent && (
-                  <div className="meta-item">
-                    <span className="super-agent-badge">Super Agent</span>
-                  </div>
-                )}
-              </div>
-            </div> */}
-
-            {/* 👇 Chat Widget appears here when an agent is selected */}
-            <div className="agent-chat-widget">
-              <NerdChatWidget
-                apiKey=""
-                agentId={selectedAgent.id.toString()}
-                agentName={selectedAgent.name}
-                position="bottom-right"
-              />
-            </div>
-          </>
-        )}
-
-        {/* {!selectedAgent && agents.length > 0 && (
-          <div className="agent-placeholder">
-            <p>Select an agent to view details</p>
+          <div className="agent-chat-widget">
+            <NerdChatWidget
+              apiKey=""
+              agentId=""
+              agentName={selectedAgent.name}
+              position="bottom-right"
+            />
           </div>
-        )} */}
+        )}
 
         {agents.length === 0 && (
           <div className="no-agents">

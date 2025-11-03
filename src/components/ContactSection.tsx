@@ -13,7 +13,6 @@ const ContactSection: React.FC = () => {
               <span className="dot"></span>
             </div>
             <h2>CONTACT US</h2>
-           
           </div>
 
           <p className="contact-description">

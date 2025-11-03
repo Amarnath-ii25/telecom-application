@@ -1,56 +1,105 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Footer from '../components/Footer';
-import { CATEGORIES } from '../constants/categories';
-import type { CategoryTile as CategoryTileType } from '../types/agent.types';
-import '../css/HomePage.css';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
+import { useCategories } from "../hooks/useCategories";
+import CategoryCard from "../components/CategoryCard";
+import "../css/HomePage.css";
+import homeIcon from "../assets/images/home-banner.png";
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
+  const { categories, loading, error } = useCategories();
 
-  const handleCategoryClick = (category: CategoryTileType) => {
-    navigate(category.route, { state: { categoryId: category.id } });
+  const telecomCategory = categories.find(
+    (cat) => cat.name?.toLowerCase() === "telecom"
+  );
+
+  const handleCategoryClick = (category: any) => {
+    navigate(category.config.route, {
+      state: {
+        categoryId: category.id,
+        categoryName: category.name,
+      },
+    });
   };
+
+  if (loading) {
+    return (
+      <div className="home-page">
+        {/* Centered logo */}
+        <div className="logo-container">
+          <img
+            src={homeIcon}
+            alt="Agent Platform Logo"
+            className="center-logo"
+          />
+        </div>
+
+        <main className="home-content">
+          <section className="hero-section">
+            <h1 className="hero-title">Agent Management Platform</h1>
+            <p className="hero-subtitle">Loading categories...</p>
+          </section>
+          <div className="loading-spinner">
+            <div className="spinner"></div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="home-page">
+        <div className="logo-container">
+          <img
+            src={homeIcon}
+            alt="Agent Platform Logo"
+            className="center-logo"
+          />
+        </div>
+
+        <main className="home-content">
+          <section className="hero-section">
+            <h1 className="hero-title">Agent Management Platform</h1>
+            <p className="hero-subtitle error-text">{error}</p>
+          </section>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="home-page">
+      <div className="logo-container">
+        <img src={homeIcon} alt="Agent Platform Logo" className="center-logo" />
+      </div>
+
       <main className="home-content">
-        {/* Hero Section with Logo and Title */}
         <section className="hero-section">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVPmlzoXKw20K6j8cmukDjRRdeIW63Er8ROg&s"
-            alt="Innovation Incubator"
-            className="hero-logo"
-          />
           <h1 className="hero-title">Agent Management Platform</h1>
-          <p className="hero-subtitle">
-            Select a category to explore specialized AI agents
-          </p>
+          <p className="hero-subtitle">Explore Telecom Management Agents</p>
         </section>
 
-        {/* Categories Section */}
         <section className="categories-section">
           <div className="categories-grid">
-            {CATEGORIES.map((category) => (
-              <div
-                key={category.id}
-                className="category-tile"
-                onClick={() => handleCategoryClick(category)}
-                role="button"
-                tabIndex={0}
-                onKeyPress={(e) => {
-                  if (e.key === 'Enter') handleCategoryClick(category);
-                }}
-              >
-                <div className="category-icon">{category.icon}</div>
-                <h3 className="category-title">{category.displayName}</h3>
-                <p className="category-description">{category.description}</p>
-                <div className="category-arrow">→</div>
+            {telecomCategory ? (
+              <CategoryCard
+                key={telecomCategory.id}
+                category={telecomCategory}
+                onCategoryClick={handleCategoryClick}
+              />
+            ) : (
+              <div className="no-categories">
+                <p>Telecom category not found</p>
               </div>
-            ))}
+            )}
           </div>
         </section>
       </main>
+
       <Footer />
     </div>
   );

@@ -1,51 +1,52 @@
-import type { CategoryTile } from '../types/agent.types';
+export interface CategoryConfig {
+  name: string;
+  displayName: string;
+  icon: string;
+  route: string;
+  description?: string;
+}
 
-export const CATEGORIES: CategoryTile[] = [
-//   {
-//     id: 1,
-//     name: 'sdlc',
-//     displayName: 'SDLC',
-//     description: 'Software Development Life Cycle management and automation',
-//     icon: '🔄',
-//     route: '/sdlc'
-//   },
-  {
-    id: 4,
-    name: 'telecom',
-    displayName: 'Telecom',
-    description: 'Telecommunications infrastructure and network management',
-    icon: '📡',
-    route: '/telecom'
+export const CATEGORY_CONFIG: Record<string, CategoryConfig> = {
+  sdlc: {
+    name: "sdlc",
+    displayName: "SDLC",
+    icon: "🔄",
+    route: "/sdlc",
+    description: "Software Development Life Cycle management and automation",
   },
-//   {
-//     id: 3,
-//     name: 'healthcare',
-//     displayName: 'Healthcare',
-//     description: 'Healthcare systems and patient data management',
-//     icon: '🏥',
-//     route: '/healthcare'
-//   },
-//   {
-//     id: 4,
-//     name: 'hr',
-//     displayName: 'Human Resources',
-//     description: 'HR operations and employee management solutions',
-//     icon: '👥',
-//     route: '/hr'
-//   }
-];
+  telecom: {
+    name: "telecom",
+    displayName: "Telecom",
+    icon: "📡",
+    route: "/telecom",
+    description: "Telecommunications infrastructure and network management",
+  },
+  healthcare: {
+    name: "healthcare",
+    displayName: "Healthcare",
+    icon: "🏥",
+    route: "/healthcare",
+    description: "Healthcare systems and patient data management",
+  },
+  hr: {
+    name: "hr",
+    displayName: "Human Resources",
+    icon: "👥",
+    route: "/hr",
+    description: "HR operations and employee management solutions",
+  },
+};
 
-export const API_CONFIG = {
-  BASE_URL: 'https://agent-na-dev.api.iinerds.com/api/v1',
-  ENDPOINTS: {
-    AGENTS: '/agent/'
-  },
-  DEFAULT_PARAMS: {
-    limit: 10,
-    offset: 0,
-    sort_by: 'id',
-    sort_order: 'asc',
-    show_null_clientid: true,
-    fetchkbsummary: false
-  }
+// Helper function to get display config for a category
+export const getCategoryConfig = (categoryName: string): CategoryConfig => {
+  const lowerName = categoryName.toLowerCase();
+  return (
+    CATEGORY_CONFIG[lowerName] || {
+      name: categoryName,
+      displayName: categoryName.toUpperCase(),
+      icon: "📁",
+      route: `/${lowerName}`,
+      description: `${categoryName} category`,
+    }
+  );
 };

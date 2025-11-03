@@ -5,7 +5,6 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header-left">
-        {/* Logo and Contact Button in Same Line */}
         <div className="top-row">
           <div className="logo-section">
             <img
@@ -16,7 +15,6 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Nav menu below logo */}
         <nav className="nav-menu">
           <ul>
             <li>
@@ -38,7 +36,6 @@ const Header: React.FC = () => {
         </nav>
       </div>
 
-      {/* Contact Button on same line as logo */}
       <button className="contact-btn">Contact Us</button>
     </header>
   );
