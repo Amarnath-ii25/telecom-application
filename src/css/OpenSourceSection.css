@@ -1,0 +1,102 @@
+.open-source-section {
+  background-color: #f9fafb; /* Tailwind bg-gray-50 */
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.open-source-container {
+  max-width: 72rem; /* Tailwind max-w-6xl */
+  margin: 0 auto;
+}
+
+/* --- Top Section --- */
+.open-source-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.open-source-logo {
+  width: 8rem;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.open-source-text {
+  max-width: 28rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .open-source-top {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .open-source-text {
+    text-align: left;
+  }
+}
+
+.open-source-title {
+  font-size: 2rem; /* Tailwind text-3xl */
+  font-weight: 300;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .open-source-title {
+    font-size: 2.25rem; /* Tailwind text-4xl */
+  }
+}
+
+.open-source-description {
+  color: #374151;
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+/* --- Bottom Grid --- */
+.open-source-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .open-source-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.open-source-item {
+  text-align: center;
+}
+
+.open-source-icon {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  margin: 0 auto 1rem auto;
+}
+
+.open-source-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.open-source-subdesc {
+  color: #4b5563;
+  font-size: 0.9rem;
+}

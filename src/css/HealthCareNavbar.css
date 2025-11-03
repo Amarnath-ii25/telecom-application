@@ -1,0 +1,26 @@
+/* src/css/HealthCareNavbar.css */
+
+.healthcare-navbar {
+  display: none;
+  align-items: center;
+  gap: 2rem; /* similar to Tailwind space-x-8 */
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Show navbar on large screens */
+@media (min-width: 1024px) {
+  .healthcare-navbar {
+    display: flex;
+  }
+}
+
+.healthcare-navbar a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.healthcare-navbar a:hover {
+  color: #61dafb; /* same hover color as before */
+}

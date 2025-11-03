@@ -1,0 +1,64 @@
+/* src/css/HealthcareFeaturesSection.css */
+
+.healthcare-features {
+  background-color: #f9fafb; /* bg-gray-50 */
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .healthcare-features {
+    padding: 5rem 5rem;
+  }
+}
+
+.healthcare-features h2 {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 600;
+  color: #1e3a8a; /* text-blue-900 */
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .healthcare-features h2 {
+    font-size: 2.25rem; /* md:text-4xl */
+  }
+}
+
+.healthcare-features p {
+  color: #374151; /* text-gray-700 */
+  max-width: 64rem; /* max-w-5xl */
+  margin: 0 auto 4rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.healthcare-features p a {
+  color: #2563eb; /* text-blue-600 */
+  text-decoration: none;
+}
+
+.healthcare-features p a:hover {
+  text-decoration: underline;
+}
+
+/* Grid layout for feature cards */
+.healthcare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  max-width: 80rem; /* max-w-7xl */
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .healthcare-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .healthcare-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,88 @@
+/* General Footer Styles */
+.healthcare-footer {
+  background-color: #f3f4f6; /* Tailwind gray-100 */
+  color: #374151; /* Tailwind gray-700 */
+  padding: 3rem 1.5rem;
+}
+
+.footer-container {
+  max-width: 80rem; /* Tailwind max-w-7xl */
+  margin: 0 auto;
+}
+
+/* --- Top Grid Layout --- */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Logo Section */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer-logo {
+    align-items: flex-start;
+  }
+}
+
+.footer-logo-img {
+  width: 10rem;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+/* Titles */
+.footer-title {
+  color: #111827; /* Tailwind gray-900 */
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+/* Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #374151;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #2563eb; /* Tailwind blue-600 */
+}
+
+/* --- Bottom Section --- */
+.footer-bottom {
+  border-top: 1px solid #d1d5db; /* Tailwind gray-300 */
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280; /* Tailwind gray-500 */
+  line-height: 1.6;
+}
+
+.footer-bottom p {
+  margin-top: 0.5rem;
+}

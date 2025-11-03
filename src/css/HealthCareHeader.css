@@ -1,0 +1,61 @@
+/* src/css/HealthCareHeader.css */
+
+.healthcare-header {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 60;
+  background-color: #002b6d;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.healthcare-header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .healthcare-header-container {
+    padding: 0.75rem 4rem;
+  }
+}
+
+.healthcare-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.healthcare-logo img {
+  width: 8rem;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .healthcare-logo img {
+    width: 10rem;
+  }
+}
+
+.donate-button {
+  margin-left: 1rem;
+  background-color: #e63946;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.donate-button:hover {
+  background-color: #ff4757;
+}

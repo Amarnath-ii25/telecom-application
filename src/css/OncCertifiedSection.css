@@ -1,0 +1,85 @@
+/* src/css/OncCertifiedSection.css */
+
+.onc-certified-section {
+  background-color: white;
+  padding: 4rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .onc-certified-section {
+    padding: 4rem 5rem;
+  }
+}
+
+.onc-certified-container {
+  max-width: 80rem; /* same as max-w-7xl */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .onc-certified-container {
+    flex-direction: row;
+  }
+}
+
+/* Text section */
+.onc-certified-text {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .onc-certified-text {
+    width: 66.6667%;
+  }
+}
+
+.onc-certified-title {
+  font-size: 1.875rem;
+  font-weight: 300;
+  color: #1e3a8a; /* text-blue-900 */
+  margin-bottom: 1rem;
+}
+
+.onc-certified-description {
+  color: #374151; /* text-gray-700 */
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.onc-certified-description a {
+  color: #2563eb; /* text-blue-600 */
+  text-decoration: none;
+}
+
+.onc-certified-description a:hover {
+  text-decoration: underline;
+}
+
+/* Logo section */
+.onc-certified-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .onc-certified-logo {
+    width: 33.3333%;
+  }
+}
+
+.onc-certified-logo img {
+  width: 18rem;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .onc-certified-logo img {
+    width: 20rem;
+  }
+}
