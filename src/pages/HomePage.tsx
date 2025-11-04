@@ -23,8 +23,8 @@ const HomePage: React.FC = () => {
         ...category,
         config: {
           ...category.config,
-          displayName: "Real Estate", // Change this to your desired name
-          icon: "🏠", // Change this to your desired icon
+          displayName: "Real Estate", 
+          icon: "🏠",
           description: "Explore real estate AI agents and property solutions" // Change this to your desired description
         }
       };
@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
 
   const filteredCategories = categories
     .filter((category) =>
-      ["telecom", "healthcare", "testing"].includes(category.name?.toLowerCase())
+      ["telecom", "healthcare", "testing", "hr"].includes(category.name?.toLowerCase())
     )
     .map(getCategoryDisplay);
 

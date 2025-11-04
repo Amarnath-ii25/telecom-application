@@ -9,6 +9,7 @@ export interface Category {
 }
 
 export interface Agent {
+  apiKey: string | undefined;
   id: number;
   name: string;
   description: string;

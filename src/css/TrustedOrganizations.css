@@ -1,0 +1,110 @@
+/* src/css/TrustedOrganizations.css */
+
+.trusted-orgs {
+  background-color: #f3f4f6; /* light gray background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2.5rem 4rem;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.trusted-left {
+  flex-shrink: 0;
+}
+
+.trusted-left h2 {
+  font-size: 1.5rem;
+  color: #1f2937; /* gray-800 */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.divider {
+  width: 2px;
+  height: 80px;
+  background-color: #374151; /* gray-700 */
+  flex-shrink: 0;
+}
+
+.trusted-right {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Logo slider area */
+.logo-slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  width: calc(200%); /* ensures smooth loop */
+  animation: scroll-right-to-left 30s linear infinite;
+}
+
+/* Each logo container */
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.logo-item img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Pause scrolling on hover */
+.logo-slider:hover .logo-track {
+  animation-play-state: paused;
+}
+
+/* Keyframes for smooth continuous scroll */
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .trusted-orgs {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .logo-item {
+    margin: 0 1rem;
+  }
+
+  .logo-item img {
+    height: 40px;
+  }
+}
