@@ -103,8 +103,8 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({
         {selectedAgent && (
           <div className="agent-chat-widget">
             <NerdChatWidget
-              apiKey=""
-              agentId=""
+              apiKey={selectedAgent.apiKey}
+              agentId={String(selectedAgent.id)}
               agentName={selectedAgent.name}
               position="bottom-right"
             />
