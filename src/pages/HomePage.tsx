@@ -1,5 +1,3 @@
-// pages/HomePage.tsx
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useCategories } from "../hooks/useCategories";
@@ -19,7 +17,7 @@ const HomePage: React.FC = () => {
   };
 
   const filteredCategories = categories.filter((category) =>
-    ["telecom", "healthcare"].includes(category.name?.toLowerCase())
+    ["telecom", "healthcare","testing"].includes(category.name?.toLowerCase())
   );
 
   if (loading) {

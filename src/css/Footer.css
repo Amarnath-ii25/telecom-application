@@ -49,7 +49,7 @@
   color: #0a2a5e;
 }
 
-.footer-demo-btn {
+.footer-RealEstatePro-btn {
   background-color: #0a2a5e;
   color: #fff;
   padding: 10px 22px;
@@ -62,7 +62,7 @@
   transition: all 0.3s ease;
 }
 
-.footer-demo-btn:hover {
+.footer-RealEstatePro-btn:hover {
   background-color: #163f73;
 }
 
@@ -127,7 +127,7 @@
     width: 100%;
   }
 
-  .footer-demo {
+  .footer-RealEstatePro {
     display: flex;
     justify-content: flex-start;
   }

@@ -16,7 +16,7 @@ const ContactSection: React.FC = () => {
           </div>
 
           <p className="contact-description">
-            Have questions? Want to see a demo? Interested in knowing more about
+            Have questions? Want to see a RealEstatePro? Interested in knowing more about
             CDG Elements?
           </p>
 

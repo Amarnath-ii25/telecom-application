@@ -90,8 +90,8 @@ const SubscriberInterconnect: React.FC = () => {
       </div>
 
       <div className="cta-container">
-        <a href="#schedule-demo" className="cta-button">
-          Schedule a Demo
+        <a href="#schedule-RealEstatePro" className="cta-button">
+          Schedule a RealEstatePro
         </a>
       </div>
     </div>

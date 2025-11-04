@@ -1,0 +1,254 @@
+.real-estate-footer {
+  background-color: #f7f7f7;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.real-estate-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.real-estate-footer-text {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 12px 0;
+  padding: 0 20px;
+}
+
+.real-estate-footer-link {
+  color: #006aff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.real-estate-footer-link:hover {
+  color: #0051cc;
+  text-decoration: underline;
+}
+
+.real-estate-footer-contact {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.real-estate-footer-dre {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.real-estate-footer-canada {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.real-estate-footer-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.real-estate-badge-link {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.real-estate-badge-link:hover {
+  opacity: 0.8;
+}
+
+.real-estate-app-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #a6a6a6;
+  border-radius: 6px;
+  background-color: #000;
+  color: #fff;
+  min-width: 140px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.real-estate-badge-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.real-estate-badge-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.real-estate-badge-small {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.real-estate-badge-large {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .real-estate-footer {
+    padding: 36px 24px;
+  }
+
+  .real-estate-footer-text {
+    font-size: 11.5px;
+    padding: 0 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .real-estate-footer {
+    padding: 32px 20px;
+  }
+
+  .real-estate-footer-text {
+    font-size: 11px;
+    padding: 0 12px;
+    margin-bottom: 14px;
+  }
+
+  .real-estate-footer-contact {
+    font-size: 12px;
+  }
+
+  .real-estate-footer-dre {
+    margin-top: 18px;
+    margin-bottom: 10px;
+  }
+
+  .real-estate-footer-canada {
+    margin-top: 20px;
+    margin-bottom: 28px;
+  }
+
+  .real-estate-footer-badges {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .real-estate-app-badge {
+    min-width: 135px;
+    height: 44px;
+    padding: 7px 14px;
+  }
+
+  .real-estate-badge-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .real-estate-badge-small {
+    font-size: 8.5px;
+  }
+
+  .real-estate-badge-large {
+    font-size: 15px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .real-estate-footer {
+    padding: 28px 16px;
+  }
+
+  .real-estate-footer-text {
+    font-size: 10px;
+    padding: 0 8px;
+    margin-bottom: 12px;
+    line-height: 1.7;
+  }
+
+  .real-estate-footer-contact {
+    font-size: 11px;
+  }
+
+  .real-estate-footer-dre {
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  .real-estate-footer-canada {
+    margin-top: 18px;
+    margin-bottom: 24px;
+  }
+
+  .real-estate-footer-badges {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .real-estate-app-badge {
+    min-width: 140px;
+    width: 100%;
+    max-width: 200px;
+    height: 42px;
+    padding: 6px 12px;
+  }
+
+  .real-estate-badge-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .real-estate-badge-small {
+    font-size: 8px;
+  }
+
+  .real-estate-badge-large {
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .real-estate-footer {
+    padding: 24px 12px;
+  }
+
+  .real-estate-footer-text {
+    font-size: 9px;
+    padding: 0 6px;
+  }
+
+  .real-estate-footer-badges {
+    gap: 8px;
+  }
+
+  .real-estate-app-badge {
+    height: 40px;
+    padding: 5px 10px;
+  }
+
+  .real-estate-badge-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .real-estate-badge-small {
+    font-size: 7px;
+  }
+
+  .real-estate-badge-large {
+    font-size: 13px;
+  }
+}

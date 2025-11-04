@@ -1,0 +1,358 @@
+.buyability-section {
+  width: 100%;
+  background: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.buyability-container {
+  max-width: 1300px;
+  width: 100%;
+}
+
+/* Header (Top part) */
+.buyability-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.buyability-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.buyability-subtext {
+  font-size: 1.1rem;
+  color: #595959;
+  margin-bottom: 1.5rem;
+}
+
+/* --- New Content Row --- */
+.buyability-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* Left Side */
+.buyability-left {
+  flex: 1;
+  margin-top: 2rem; /* moves the left card down to align with right cards */
+}
+
+/* Loan Card */
+.loan-card {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.loan-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.loan-logo {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+}
+
+.loan-brand {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.loan-values {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.loan-values h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.loan-values p {
+  color: #595959;
+  font-size: 0.95rem;
+}
+
+/* Button */
+.buyability-btn {
+  background-color: #006aff;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.buyability-btn:hover {
+  background-color: #0052cc;
+}
+
+/* Right Side */
+.buyability-right {
+  flex: 1.5;
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+}
+
+.home-card {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-width: 300px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-4px);
+}
+
+.home-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #e65300;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.home-placeholder {
+  padding: 1rem;
+}
+
+.line {
+  background: #e8e8e8;
+  height: 10px;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.line.short {
+  width: 60%;
+}
+
+.line.long {
+  width: 80%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .buyability-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .buyability-right {
+    justify-content: center;
+  }
+
+  .buyability-left {
+    margin-top: 0;
+  }
+
+  .buyability-header {
+    text-align: center;
+  }
+}
+.buyability-section {
+  width: 100%;
+  background: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.buyability-container {
+  max-width: 1300px;
+  width: 100%;
+}
+
+/* Header */
+.buyability-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.buyability-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.buyability-subtext {
+  font-size: 1.1rem;
+  color: #595959;
+  margin-bottom: 1.5rem;
+}
+
+/* Main content layout */
+.buyability-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* Left section */
+.buyability-left {
+  flex: 1;
+  margin-top: 2rem;
+}
+
+/* Loan Card */
+.loan-card {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.loan-values {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.loan-values h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.loan-values p {
+  color: #595959;
+  font-size: 0.95rem;
+}
+
+/* Button */
+.buyability-btn {
+  background-color: #006aff;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.buyability-btn:hover {
+  background-color: #0052cc;
+}
+
+/* --- Right side (Responsive Grid) --- */
+.buyability-right {
+  flex: 1.5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.home-card {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-4px);
+}
+
+.home-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #e65300;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.home-placeholder {
+  padding: 1rem;
+}
+
+.line {
+  background: #e8e8e8;
+  height: 10px;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.line.short {
+  width: 60%;
+}
+
+.line.long {
+  width: 80%;
+}
+
+/* --- Responsive breakpoints --- */
+@media (max-width: 1200px) {
+  .buyability-right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .buyability-content {
+    flex-direction: column;
+  }
+
+  .buyability-right {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+
+  .buyability-header {
+    text-align: center;
+  }
+
+  .buyability-left {
+    align-items: center;
+    margin-top: 0;
+  }
+}

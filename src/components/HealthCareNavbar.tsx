@@ -4,7 +4,7 @@ import "../css/HealthCareNavbar.css"; // import the CSS file
 const HealthCareNavbar: React.FC = () => {
   const navItems = [
     "Features",
-    "Demo",
+    "RealEstatePro",
     "Download",
     "Modules",
     "Blog",

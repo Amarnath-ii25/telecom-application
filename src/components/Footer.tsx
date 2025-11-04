@@ -45,8 +45,8 @@ const Footer: React.FC = () => {
           </ul>
         </div>
 
-        <div className="footer-column footer-demo">
-          <button className="footer-demo-btn">SCHEDULE A DEMO</button>
+        <div className="footer-column footer-RealEstatePro">
+          <button className="footer-RealEstatePro-btn">SCHEDULE A RealEstatePro</button>
         </div>
       </div>
 

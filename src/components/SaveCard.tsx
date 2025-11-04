@@ -16,7 +16,7 @@ const SaveCard: React.FC = () => {
           On comparable plans, plus optional streaming and in-flight Wi-Fi.
         </p>
         <p className="save-terms">
-          <strong>Check the math at Demo website.com/Switch.</strong> Savings
+          <strong>Check the math at RealEstatePro website.com/Switch.</strong> Savings
           vs. comparable plans at AT&T and Verizon plus the costs of optional
           benefits; plan features and taxes & fees vary. Savings per line
           include 3rd line free via mo. bill credits; credits stop if you cancel

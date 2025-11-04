@@ -18,7 +18,7 @@ const OpenEMRHome: React.FC = () => {
     {
       image: tryNowImg,
       title: "Try Now",
-      text: "Try the demo or launch your own free, hosted OpenEMR now.",
+      text: "Try the RealEstatePro or launch your own free, hosted OpenEMR now.",
     },
     {
       image: findSupportImg,

@@ -18,7 +18,7 @@ const HealthCareFooter: React.FC = () => {
             <h3 className="footer-title">Main Project Links</h3>
             <ul className="footer-links">
               <li><a href="#">Features</a></li>
-              <li><a href="#">Demo</a></li>
+              <li><a href="#">RealEstatePro</a></li>
               <li><a href="#">Download</a></li>
               <li><a href="#">Modules</a></li>
               <li><a href="#">Blog</a></li>

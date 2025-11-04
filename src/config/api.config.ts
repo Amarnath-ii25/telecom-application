@@ -1,7 +1,7 @@
 export const API_CONFIG = {
   BASE_URL: "https://agent-na-dev.api.iinerds.com/api/v1",
   AUTH_TOKEN:
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY0NDYyNjQwLTVkZWQtNDE3Ni1hYTEyLWI4MGI5MWNiZmUxZiIsImVtYWlsIjoiYWRtaW5AbmVyZGFnZW50LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2MjE0OTUwNSwiZXhwIjoxNzYyMjM1OTA1fQ.9J-MLpue0u64nISALsfxNH0mhLiPseMqdj60asjpv-c",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY0NDYyNjQwLTVkZWQtNDE3Ni1hYTEyLWI4MGI5MWNiZmUxZiIsImVtYWlsIjoiYWRtaW5AbmVyZGFnZW50LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2MjIzNzI5MiwiZXhwIjoxNzYyMzIzNjkyfQ.xjKqiVdja9XxAVwQixxEElqF4KOqtAD7GzwJvZJdbtE",
   ENDPOINTS: {
     CATEGORIES: "/category/",
     AGENTS: "/agent/",
