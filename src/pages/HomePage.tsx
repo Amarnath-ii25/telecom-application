@@ -16,9 +16,27 @@ const HomePage: React.FC = () => {
     });
   };
 
-  const filteredCategories = categories.filter((category) =>
-    ["telecom", "healthcare","testing"].includes(category.name?.toLowerCase())
-  );
+  // Override display settings for specific categories
+  const getCategoryDisplay = (category: any) => {
+    if (category.name?.toLowerCase() === "testing") {
+      return {
+        ...category,
+        config: {
+          ...category.config,
+          displayName: "Real Estate", // Change this to your desired name
+          icon: "🏠", // Change this to your desired icon
+          description: "Explore real estate AI agents and property solutions" // Change this to your desired description
+        }
+      };
+    }
+    return category;
+  };
+
+  const filteredCategories = categories
+    .filter((category) =>
+      ["telecom", "healthcare", "testing"].includes(category.name?.toLowerCase())
+    )
+    .map(getCategoryDisplay);
 
   if (loading) {
     return (
@@ -86,7 +104,7 @@ const HomePage: React.FC = () => {
           <div className="categories-grid">
             {filteredCategories.length === 0 ? (
               <div className="no-categories">
-                <p>No Telecom or Healthcare categories found</p>
+                <p>No categories found</p>
               </div>
             ) : (
               filteredCategories.map((category) => (
